@@ -1,0 +1,215 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+@font-face {
+    font-family: 'Caesar Dressing';
+    src: url('/src/assets/CaesarDressing.woff2') format('woff2'),
+    
+}
+
+@theme {
+--font-primary: 'Caesar Dressing' !important;
+--font-secondary: 'Kanit' !important;
+
+--color-hint: #2A475E;
+--color-primary: #CEEAF8;
+--color-third: #473C79;
+--color-demp: #3B6B85;
+}
+
+
+body::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+/* Untuk Firefox */
+body {
+  scrollbar-width: thin; /* Mengurangi visibilitas scrollbar */
+}
+body::-moz-scrollbar:horizontal {
+  display: none;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 20px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: #1F3A4D;
+    border: 1px solid #2A475E;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background-color: #2A475E;
+    /* Tailwind gray-300 */
+}
+
+@keyframes hop {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes twirl {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(15deg) scale(1.1);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-15deg) scale(0.9);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes sway {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(10px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(-10px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes boop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(20deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes wobble {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(-10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* New Festive Drum Animations */
+@keyframes bounce-drum {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    20% {
+        transform: translateY(-20px) scale(1.1);
+    }
+
+    40% {
+        transform: translateY(0) scale(1);
+    }
+
+    60% {
+        transform: translateY(-10px) scale(1.05);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+
+    25% {
+        transform: rotate(15deg) translateX(10px);
+    }
+
+    50% {
+        transform: rotate(0deg) translateX(0);
+    }
+
+    75% {
+        transform: rotate(-15deg) translateX(-10px);
+    }
+
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+}
+
+.animate-hop {
+    animation: hop 2s ease-in-out infinite;
+}
+
+.animate-twirl {
+    animation: twirl 3s ease-in-out infinite;
+}
+
+.animate-sway {
+    animation: sway 2.5s ease-in-out infinite;
+}
+
+.animate-boop {
+    animation: boop 1.5s ease-in-out infinite;
+}
+
+.animate-wobble {
+    animation: wobble 2s ease-in-out infinite;
+}
+
+.animate-bounce-drum {
+    animation: bounce-drum 1.8s ease-in-out infinite;
+}
+
+.animate-roll {
+    animation: roll 2.2s ease-in-out infinite;
+}
+
+
